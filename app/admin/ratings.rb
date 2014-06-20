@@ -1,4 +1,5 @@
 ActiveAdmin.register Ratings do
+  permit_params :whiskey_id, :person_id, :nose, :taste, :finish, :balance, :review
 
   
   # See permitted parameters documentation:
