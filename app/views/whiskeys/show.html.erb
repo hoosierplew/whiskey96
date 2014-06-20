@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @whiskey.type %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @whiskey.tags %>
+</p>
+
+<p>
+  <strong>Distillery:</strong>
+  <%= @whiskey.distillery %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @whiskey.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @whiskey.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @whiskey.image %>
+</p>
+
+<%= link_to 'Edit', edit_whiskey_path(@whiskey) %> |
+<%= link_to 'Back', whiskeys_path %>

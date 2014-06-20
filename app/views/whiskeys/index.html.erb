@@ -1,0 +1,37 @@
+<h1>Listing whiskeys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Tags</th>
+      <th>Distillery</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whiskeys.each do |whiskey| %>
+      <tr>
+        <td><%= whiskey.type %></td>
+        <td><%= whiskey.tags %></td>
+        <td><%= whiskey.distillery %></td>
+        <td><%= whiskey.name %></td>
+        <td><%= whiskey.description %></td>
+        <td><%= whiskey.image %></td>
+        <td><%= link_to 'Show', whiskey %></td>
+        <td><%= link_to 'Edit', edit_whiskey_path(whiskey) %></td>
+        <td><%= link_to 'Destroy', whiskey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whiskey', new_whiskey_path %>
