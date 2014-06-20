@@ -1,4 +1,5 @@
 ActiveAdmin.register Whiskey do
+  permit_params :type, :tags, :distillery, :name, :description, :image
 
   
   # See permitted parameters documentation:
