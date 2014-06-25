@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Whiskey96
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .off-canvas-wrap{ :data => { :offcanvas => true } }
+      .inner-wrap
+        %nav.main-menu.hide-for-medium-up
+          = render :partial => "devise/shared/header_mobile"
+        %nav.fixed.top-bar.hide-for-small{ :data => { :topbar => true } }
+          = render :partial => "devise/shared/header"
+        %section.main-content
+        .columns.small-12= yield
+      %a.exit-off-canvas

@@ -1,4 +1,6 @@
 Whiskey96::Application.routes.draw do
+  resources :ratings
+
   resources :whiskeys
 
   devise_for :admin_users, ActiveAdmin::Devise.config

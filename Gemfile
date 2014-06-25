@@ -51,3 +51,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'validates_formatting_of'
+gem 'haml-rails'
+group :development do
+  gem 'annotate'
+end

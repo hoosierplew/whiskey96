@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Whiskey:
+  = @rating.whiskey_id
+%p
+  %b Person:
+  = @rating.person_id
+%p
+  %b Nose:
+  = @rating.nose
+%p
+  %b Taste:
+  = @rating.taste
+%p
+  %b Finish:
+  = @rating.finish
+%p
+  %b Balance:
+  = @rating.balance
+%p
+  %b Review:
+  = @rating.review
+
+= link_to 'Edit', edit_rating_path(@rating)
+\|
+= link_to 'Back', ratings_path

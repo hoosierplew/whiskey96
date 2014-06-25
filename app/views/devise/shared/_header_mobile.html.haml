@@ -1,0 +1,15 @@
+%nav.tab-bar
+  %section.left
+    %a.left-off-canvas-toggle.menu-icon
+      %span
+  %section.middle.tab-bar-section
+    %h3= link_to "Whiskey96", "/"
+  %section.right
+    %a.button.tiny.radius.secondary.right-off-canvas-toggle
+      %i.fi-torso
+/ Left Off Canvas Menu
+%aside.left-off-canvas-menu
+  %ul.off-canvas-list= render :partial => "devise/shared/header_menu_items"
+%aside.right-off-canvas-menu
+  %ul.off-canvas-list
+    %li test

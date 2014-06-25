@@ -34,5 +34,5 @@
 //= require bower_components/foundation/js/vendor/jquery.cookie
 //= require bower_components/foundation/js/vendor/modernizr
 //= require bower_components/foundation/js/vendor/placeholder
-//= require js/app
 //= require_tree .
+//= require js/app
