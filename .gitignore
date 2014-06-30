@@ -6,6 +6,7 @@ db/structure.sql
 /tmp
 .ruby-version
 config/database.yml
+config/omniauth.yml
 *.xcf
 *.swp
 tmp/restart.txt

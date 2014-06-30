@@ -21,6 +21,18 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :authentications, dependent: :destroy
+
+  # Since we only support login through Meetup, email and password
+  # should not be required.
+  def email_required?
+    false
+  end
+
+  def password_required?
+    false
+  end
 end

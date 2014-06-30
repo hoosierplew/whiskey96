@@ -1,0 +1,9 @@
+development:
+  meetup:
+    key: 
+    secret: 
+
+production:
+  meetup:
+    key: 
+    secret:
