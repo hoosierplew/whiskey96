@@ -1,11 +1,7 @@
 class Users::SessionsController < Devise::SessionsController
-  include ApplicationHelper
 
-  def create
+  def destroy
     super
   end
-
-  def new
-    super
-  end
+  
 end

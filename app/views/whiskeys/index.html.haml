@@ -1,0 +1,31 @@
+%h1 Listing whiskeys
+
+%table
+  %thead
+    %tr
+      %th Type
+      %th Tags
+      %th Distillery
+      %th Name
+      %th Description
+      %th Image
+      %th &nbsp;
+      %th &nbsp;
+      %th &nbsp;
+
+  %tbody
+    - @whiskeys.each do |whiskey|
+      %tr
+        %td= whiskey.whiskey_type
+        %td= whiskey.tags
+        %td= whiskey.distillery
+        %td= whiskey.name
+        %td= whiskey.description
+        %td= whiskey.image
+        %td= link_to 'Show', whiskey
+        %td= link_to 'Edit', edit_whiskey_path(whiskey)
+        %td= link_to 'Destroy', whiskey, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Whiskey', new_whiskey_path
