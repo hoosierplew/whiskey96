@@ -25,6 +25,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :authentications, dependent: :destroy
+  has_one :meetup_authentication, -> { where(provider: 'meetup') },
+    class_name: 'Authentication'
+
+  has_attached_file :service_avatar
 
   # Since we only support login through Meetup, email and password
   # should not be required.
